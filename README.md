@@ -1,6 +1,6 @@
 # engvanntha/request-trace
 
-Reusable request-aware logging package for Laravel 5.8 / 7 / 11.
+Reusable request-aware logging package for Laravel 5.8 through 12.
 
 ## Installation
 

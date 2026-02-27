@@ -43,7 +43,7 @@ class ClassName
 Generated message format:
 
 ```text
-<X-Request-Id><CurrentProjectName><ClassName>@<functionName>@<variableName>
+<X-Request-Id>@<CurrentProjectName>@<ClassName>@<functionName>@<variableName>
 ```
 
 ## Middleware

@@ -1,0 +1,22 @@
+{
+    "name": "engvanntha/request-trace",
+    "description": "Request-aware class/function/variable logging for Laravel applications.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.3",
+        "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Engvanntha\\RequestTrace\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Engvanntha\\RequestTrace\\RequestTraceServiceProvider"
+            ]
+        }
+    }
+}

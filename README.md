@@ -21,21 +21,21 @@ composer require engvanntha/request-trace
 ```php
 use Engvanntha\RequestTrace\Traits\RequestTraceTrait;
 
-class MerchantUserService
+class ClassName
 {
     use RequestTraceTrait;
 
-    public function getMerchantUser(array $data)
+    public function functionName(array $data)
     {
-        $merchantUser = $this->queryMerchantUser($data);
+        $user = $this->queryUser($data);
 
         // Log one variable
-        $this->traceLog('merchantUser', $merchantUser);
+        $this->traceLog('user', $user);
 
         // Log selected variables only
-        $this->traceLogVars(compact('data', 'merchantUser'), array('merchantUser'));
+        $this->traceLogVars(compact('data', 'user'), array('user'));
 
-        return $merchantUser;
+        return $user;
     }
 }
 ```
@@ -59,7 +59,7 @@ This middleware should run early in the HTTP stack.
 With `auto_log_requests=true`, each request is logged automatically in format:
 
 ```text
-<X-Request-Id><CurrentProjectName><ClassName>@<functionName>@<request|response>
+<X-Request-Id>@<CurrentProjectName>@<ClassName>@<functionName>@<request|response>
 ```
 
 Use `RequestTraceTrait` only for additional deep logs inside selected services/functions.
